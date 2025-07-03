@@ -10,52 +10,67 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #e0f7fa, #f0f4f8);
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      text-align: center;
+      padding: 20px;
     }
 
     .card {
       background: #ffffff;
-      padding: 40px 30px;
+      padding: 30px 24px;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      max-width: 90%;
-      width: 400px;
-      animation: fadeIn 1s ease;
+      max-width: 100%;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      animation: fadeIn 0.9s ease;
     }
 
     h2 {
       color: #333;
-      margin-bottom: 20px;
-      font-size: 24px;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 24px;
     }
 
     .button {
       display: inline-block;
       background-color: #0077b5;
       color: #fff;
-      padding: 14px 28px;
+      padding: 16px 28px;
       font-size: 16px;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
     .button:hover {
       background-color: #005f91;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #aaa;
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
@@ -63,17 +78,25 @@
       }
     }
 
-    .footer {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #888;
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 15px;
+      }
+      .button {
+        width: 100%;
+        font-size: 15px;
+        padding: 14px 0;
+      }
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <h2>Hey there! 👋</h2>
-    <p>Tap below to visit Aravind's LinkedIn profile</p>
+    <h2>Welcome 👋</h2>
+    <p>Tap the button below to open Aravind's LinkedIn profile</p>
     <a class="button" href="https://linkedin.com/in/nithin-aditya" target="_blank">
       Open LinkedIn
     </a>
