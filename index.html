@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get("source") === "qr") {
+        window.location.href = "https://www.linkedin.com/in/aravindar24";
+      } else {
+        document.write("<h2>Access Denied</h2><p>This page is only accessible via a valid QR code.</p>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
