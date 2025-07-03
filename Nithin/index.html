@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nithin Aditya S – Links</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Nithin Aditya S – Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -12,75 +13,89 @@
       box-sizing: border-box;
     }
 
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right top, #1e3c72, #2a5298);
-      min-height: 100vh;
+      background: linear-gradient(-45deg, #f1f4f9, #e0f7fa, #fcefe9, #f4e2d8);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease infinite;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px;
     }
 
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-      padding: 40px 30px;
-      max-width: 420px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 36px 28px;
+      max-width: 400px;
       width: 100%;
       text-align: center;
-      color: #fff;
-      animation: slideUp 0.8s ease;
+      color: #222;
+      animation: fadeIn 1s ease;
     }
 
     .card h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      color: #333;
     }
 
     .card p {
-      font-size: 16px;
+      font-size: 15px;
       margin-bottom: 30px;
-      color: #e0e0e0;
+      color: #555;
     }
 
-    .button {
-      display: block;
-      background-color: #0a66c2;
-      color: white;
-      padding: 14px 24px;
+    .social-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 12px 20px;
+      margin: 12px auto;
+      border-radius: 10px;
+      color: #333;
       font-size: 16px;
-      border-radius: 8px;
       text-decoration: none;
-      margin: 10px auto;
-      max-width: 280px;
       transition: background 0.3s ease, transform 0.2s ease;
+      border: 1px solid #ccc;
+      max-width: 280px;
     }
 
-    .button:hover {
-      background-color: #004182;
-      transform: scale(1.05);
+    .social-button i {
+      font-size: 17px;
+      opacity: 0.7;
     }
 
-    .whatsapp {
-      background-color: #25D366;
-    }
-
-    .whatsapp:hover {
-      background-color: #1DA851;
+    .social-button:hover {
+      background: rgba(255, 255, 255, 0.7);
+      transform: translateY(-2px);
     }
 
     .footer {
-      margin-top: 25px;
+      margin-top: 30px;
       font-size: 12px;
-      color: #ccc;
+      color: #999;
     }
 
-    @keyframes slideUp {
+    @keyframes fadeIn {
       from {
         opacity: 0;
         transform: translateY(20px);
@@ -91,9 +106,9 @@
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
       .card {
-        padding: 30px 20px;
+        padding: 28px 20px;
       }
       .card h1 {
         font-size: 22px;
@@ -101,33 +116,28 @@
       .card p {
         font-size: 14px;
       }
-      .button {
-        width: 100%;
-        font-size: 15px;
-        padding: 16px 0;
-      }
     }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <h1>Hi, I'm Nithin Aditya S 👋</h1>
-    <p>Let’s connect — choose your preferred platform below</p>
+    <h1>Nithin Aditya S</h1>
+    <p>Let’s connect professionally</p>
 
     <!-- LinkedIn Button -->
-    <a class="button" href="https://www.linkedin.com/in/nithin-aditya" target="_blank">
-      View LinkedIn
+    <a class="social-button" href="https://www.linkedin.com/in/nithin-aditya" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn Profile
     </a>
 
-    <!-- WhatsApp Button (Toggle on/off below) -->
+    <!-- WhatsApp Button (Toggle below) -->
     <script>
-      const showWhatsApp = true; // 🔁 CHANGE TO false TO HIDE WHATSAPP BUTTON
+      const showWhatsApp = true; // Change to false to hide WhatsApp
 
       if (showWhatsApp) {
         document.write(`
-          <a class="button whatsapp" href="https://wa.me/919895293939" target="_blank">
-            Chat on WhatsApp
+          <a class="social-button" href="https://wa.me/919895293939" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Me
           </a>
         `);
       }
