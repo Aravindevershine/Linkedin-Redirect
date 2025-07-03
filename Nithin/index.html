@@ -1,29 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aravind's LinkedIn</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        text-align: center;
-        padding-top: 100px;
-        background: #f9f9f9;
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aravind's LinkedIn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f0f4f8);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      width: 400px;
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #0077b5;
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #005f91;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
-      .button {
-        display: inline-block;
-        background-color: #0077b5;
-        color: white;
-        padding: 12px 24px;
-        font-size: 18px;
-        border-radius: 8px;
-        text-decoration: none;
-        margin: 10px;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-    </style>
-  </head>
-  <body>
-    <h2>Welcome to Aravind's LinkedIn QR Page</h2>
-    <a class="button" href="https://linkedin.com/in/nithin-aditya" target="_blank">Open Aravind's LinkedIn</a>
-  </body>
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Hey there! 👋</h2>
+    <p>Tap below to visit Aravind's LinkedIn profile</p>
+    <a class="button" href="https://linkedin.com/in/nithin-aditya" target="_blank">
+      Open LinkedIn
+    </a>
+    <div class="footer">© 2025 Aravind</div>
+  </div>
+</body>
 </html>
