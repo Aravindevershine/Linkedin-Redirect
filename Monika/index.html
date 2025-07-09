@@ -3,75 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mrs. Monika Surana – Our Quiet Guide</title>
+  <title>Mrs. Monika Surana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #fff8f0;
-      color: #333;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+      background: linear-gradient(135deg, #fdf2f8, #e0f7fa);
+      font-family: 'Roboto', sans-serif;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      height: 100vh;
+      color: #444;
     }
     .card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 16px;
-      max-width: 600px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      background-color: white;
+      padding: 3rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
-    }
-    h2 {
-      color: #944d77;
-      margin-bottom: 0.5rem;
-    }
-    h3 {
-      margin-top: 1.5rem;
-      color: #555;
-    }
-    ul {
-      list-style: circle;
-      padding-left: 1.5rem;
-      text-align: left;
+      max-width: 600px;
+      animation: fadeIn 1.2s ease;
     }
     .quote {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
       font-style: italic;
-      color: #666;
-      margin-top: 1.5rem;
+      color: #6a1b9a;
+      margin-bottom: 2rem;
     }
-    .linkedin {
-      margin-top: 1.5rem;
-    }
-    .linkedin a {
-      color: #0a66c2;
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #0a66c2;
+      color: white;
       text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
+      transition: background 0.3s ease;
     }
-    .linkedin a:hover {
-      text-decoration: underline;
+    .btn:hover {
+      background: #004182;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <h2>Mrs. Monika Surana</h2>
-    <p>A gracious presence who quietly uplifts our journey with her support, elegance, and positive spirit.</p>
-
-    <h3>How She Helps</h3>
-    <ul>
-      <li>Offers thoughtful suggestions in key moments</li>
-      <li>Supports team spirit during events and celebrations</li>
-      <li>Brings a graceful presence during important occasions</li>
-    </ul>
-
     <p class="quote">“Behind every strong organization, there’s someone quietly cheering and guiding from the heart.”</p>
-
-    <div class="linkedin">
-      <a href="https://www.linkedin.com/in/suranamonika/" target="_blank">View LinkedIn Profile</a>
-    </div>
+    <a href="https://www.linkedin.com/in/suranamonika/" class="btn" target="_blank">Visit Monika Surana’s LinkedIn</a>
   </div>
 </body>
 </html>
-
